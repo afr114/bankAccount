@@ -25,7 +25,7 @@ $(document).ready(function() {
     var inputtedLastName = $("input#new-last-name").val();
     var newContact = { firstName: inputtedFirstName, lastName: inputtedLastName, addresses: [] };
 
-    $("#new-addresses").each(function() {
+    $(".new-address").each(function() {
       var inputtedStreet = $(this).find("input.new-street").val();
       var inputtedCity = $(this).find("input.new-city").val();
       var inputtedState = $(this).find("input.new-state").val();
