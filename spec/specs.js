@@ -14,14 +14,15 @@ describe('Contact', function(){
 
 describe('Address', function() {
   it("creates a new address with the given specifications", function() {
-    var testAddress = new Address("3711 SW Pomona St", "Portland", "Oregon");
+    var testAddress = new Address("3711 SW Pomona St", "Portland", "Oregon", "Home");
     expect(testAddress.street).to.equal("3711 SW Pomona St");
     expect(testAddress.city).to.equal("Portland");
     expect(testAddress.state).to.equal("Oregon");
+    expect(testAddress.category).to.equal("Home");
   });
 
   it("adds the fullAddress method to all addresses", function(){
-    var testAddress = new Address("3711 SW Pomona St","Portland","Oregon");
-    expect(testAddress.fullAddress()).to.equal("3711 SW Pomona St, Portland, Oregon");
+    var testAddress = new Address("3711 SW Pomona St","Portland","Oregon", "Home");
+    expect(testAddress.fullAddress()).to.equal("3711 SW Pomona St, Portland, Oregon, Home");
   });
 });
