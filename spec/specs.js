@@ -1,28 +1,19 @@
-describe('Contact', function(){
-  it("creates a new contact with the given specifications", function(){
-    var testContact = new Contact("John", "Smith");
-    expect(testContact.firstName).to.equal("John");
-    expect(testContact.lastName).to.equal("Smith");
-    expect(testContact.addresses).to.eql([]);
+describe('bankAccount', function(){
+  it("creates a new bank account", function(){
+    var testAccount = new bankAccount("John", "Smith", 20);
+    expect(testAccount.customerName).to.equal("John Smith");
+    expect(testAccount.initialDeposit).to.equal(20);
+    expect(testAccount.balance).to.equal(20);
   });
 
-  it("adds the fullName method to all contacts", function() {
-    var testContact = new Contact("John","Smith");
-    expect(testContact.fullName()).to.equal("John Smith");
-  });
-});
-
-describe('Address', function() {
-  it("creates a new address with the given specifications", function() {
-    var testAddress = new Address("3711 SW Pomona St", "Portland", "Oregon", "Home");
-    expect(testAddress.street).to.equal("3711 SW Pomona St");
-    expect(testAddress.city).to.equal("Portland");
-    expect(testAddress.state).to.equal("Oregon");
-    expect(testAddress.category).to.equal("Home");
-  });
-
-  it("adds the fullAddress method to all addresses", function(){
-    var testAddress = new Address("3711 SW Pomona St","Portland","Oregon", "Home");
-    expect(testAddress.fullAddress()).to.equal("3711 SW Pomona St, Portland, Oregon, Home");
-  });
+  it("removes an amount out of the bank account", function(){
+    var testAccount = new bankAccount("John", "Smith", 20);
+    testAccount.withdraw(20);
+    expect(testAccount.balance).to.equal(0);
+  })
+  it("adds an amount to the bank account", function(){
+    var testAccount = new bankAccount("John", "Smith", 20);
+    testAccount.deposit(10);
+    expect(testAccount.balance).to.equal(30);
+  })
 });
