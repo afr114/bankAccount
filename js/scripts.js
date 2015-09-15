@@ -29,8 +29,6 @@ function resetFields() {
 
 
 $(document).ready(function() {
-
-
   $("#add-address").click(function() {
     $("#new-addresses").append(
       '<div class="new-address">' +
@@ -65,11 +63,11 @@ $(document).ready(function() {
     var inputtedLastName = $("input#new-last-name").val();
     var newContact = new Contact(inputtedFirstName, inputtedLastName);
 
-
     $(".new-address").each(function() {
       var inputtedStreet = $(this).find("input.new-street").val();
       var inputtedCity = $(this).find("input.new-city").val();
       var inputtedState = $(this).find("input.new-state").val();
+
       var inputtedCategory = $(this).find("#new-type").val();
       var newAddress = new Address(inputtedStreet, inputtedCity, inputtedState, inputtedCategory);
       newContact.addresses.push(newAddress);
