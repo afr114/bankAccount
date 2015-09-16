@@ -1,9 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>Bank Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/scripts.js"></script>
   </head>
+  <h1>B.A. Bank</h1>
   <body>
-
+    <div class="container">
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="firstName">First Name</label>
+          <div class="col-sm-10">
+            <input type="firstName" class="form-control" id="firstName" placeholder="Enter your first name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="lastName">Last Name</label>
+          <div class="col-sm-10">
+            <input type="lastName" class="form-control" id="lastName" placeholder="Enter your last name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="initialDeposit">Enter initial deposit</label>
+          <div class="col-sm-10">
+            <input type="initialDeposit" class="form-control" id="initialDeposit" placeholder="0">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label><input type="checkbox"> Remember me</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
   </body>
 </html>

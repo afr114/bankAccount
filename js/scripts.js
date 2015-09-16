@@ -1,7 +1,7 @@
 function bankAccount(firstName, lastName, initialDeposit){
   this.customerName = firstName + " " + lastName;
   this.initialDeposit = initialDeposit;
-  this.balance = initialDeposit + 0;
+  this.balance = initialDeposit;
 }
 
 bankAccount.prototype.withdraw = function(withdrawAmount) {
